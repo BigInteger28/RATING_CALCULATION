@@ -37,7 +37,7 @@ func main() {
 		fmt.Print("\n\nOwn Rating: ")
 		fmt.Scan(&ownRating)
 		//Hoeveel rating boven eigen rating krijg je max punten?
-		theRange = 750
+		theRange = 450
 		//Hoeveel punten krijg je max erbij?
 		maxRatingAdd = 30
 		for input != "." {
