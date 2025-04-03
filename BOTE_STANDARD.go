@@ -22,10 +22,10 @@ func getBonus(theRange int, maxRatingAdd int, ratingOpponent int, ownRating int,
 		if ratingOpponent >= ownRating {
 			return bonus / 2
 		} else {
-			return 0 - ((maxRatingAdd - bonus) / 2)
+			return 0 - ((((maxRatingAdd - bonus) / 2) * 75) / 100)
 		}
 	} else {
-		return 0 - (maxRatingAdd - bonus)
+		return 0 - (((maxRatingAdd - bonus) * 75) / 100)
 	}
 }
 
@@ -37,9 +37,9 @@ func main() {
 		fmt.Print("\n\nOwn Rating: ")
 		fmt.Scan(&ownRating)
 		//Hoeveel rating boven eigen rating krijg je max punten?
-		theRange = 450
+		theRange = 675
 		//Hoeveel punten krijg je max erbij?
-		maxRatingAdd = 30
+		maxRatingAdd = 40
 		for input != "." {
 			fmt.Print("Rating tegenstander of . als je klaar bent: ")
 			fmt.Scan(&input)
